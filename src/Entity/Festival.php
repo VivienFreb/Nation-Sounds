@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FestivalRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,16 @@ class Festival
      * @ORM\Column(type="array")
      */
     private $ReseauxSociaux = [];
+
+    /**
+     * @ORM\OneToMany(targetEntity=POI::class, mappedBy="festival")
+     */
+    private $POIs;
+
+    public function __construct()
+    {
+        $this->POIs = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -103,6 +115,36 @@ class Festival
     public function setReseauxSociaux(array $ReseauxSociaux): self
     {
         $this->ReseauxSociaux = $ReseauxSociaux;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|POI[]
+     */
+    public function getPOIs(): Collection
+    {
+        return $this->POIs;
+    }
+
+    public function addPOI(POI $pOI): self
+    {
+        if (!$this->POIs->contains($pOI)) {
+            $this->POIs[] = $pOI;
+            $pOI->setFestival($this);
+        }
+
+        return $this;
+    }
+
+    public function removePOI(POI $pOI): self
+    {
+        if ($this->POIs->removeElement($pOI)) {
+            // set the owning side to null (unless already changed)
+            if ($pOI->getFestival() === $this) {
+                $pOI->setFestival(null);
+            }
+        }
 
         return $this;
     }
