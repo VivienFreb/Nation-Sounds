@@ -47,6 +47,11 @@ class Events
      */
     private $Places;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Festival::class, inversedBy="events")
+     */
+    private $Festival;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Events
     public function setPlaces(int $Places): self
     {
         $this->Places = $Places;
+
+        return $this;
+    }
+
+    public function getFestival(): ?Festival
+    {
+        return $this->Festival;
+    }
+
+    public function setFestival(?Festival $Festival): self
+    {
+        $this->Festival = $Festival;
 
         return $this;
     }

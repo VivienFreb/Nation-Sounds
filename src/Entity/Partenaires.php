@@ -37,6 +37,11 @@ class Partenaires
      */
     private $ReseauxSociaux = [];
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Festival::class, inversedBy="partenaires")
+     */
+    private $Festival;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Partenaires
     public function setReseauxSociaux(?array $ReseauxSociaux): self
     {
         $this->ReseauxSociaux = $ReseauxSociaux;
+
+        return $this;
+    }
+
+    public function getFestival(): ?Festival
+    {
+        return $this->Festival;
+    }
+
+    public function setFestival(?Festival $Festival): self
+    {
+        $this->Festival = $Festival;
 
         return $this;
     }

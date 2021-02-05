@@ -27,6 +27,11 @@ class FAQ
      */
     private $Reponse;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=festival::class, inversedBy="FAQs")
+     */
+    private $festival;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class FAQ
     public function setReponse(string $Reponse): self
     {
         $this->Reponse = $Reponse;
+
+        return $this;
+    }
+
+    public function getFestival(): ?festival
+    {
+        return $this->festival;
+    }
+
+    public function setFestival(?festival $festival): self
+    {
+        $this->festival = $festival;
 
         return $this;
     }

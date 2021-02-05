@@ -32,6 +32,11 @@ class Information
      */
     private $DateEmission;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Festival::class, inversedBy="information")
+     */
+    private $Festival;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Information
     public function setDateEmission(\DateTimeInterface $DateEmission): self
     {
         $this->DateEmission = $DateEmission;
+
+        return $this;
+    }
+
+    public function getFestival(): ?Festival
+    {
+        return $this->Festival;
+    }
+
+    public function setFestival(?Festival $Festival): self
+    {
+        $this->Festival = $Festival;
 
         return $this;
     }

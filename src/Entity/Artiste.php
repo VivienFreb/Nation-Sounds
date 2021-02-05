@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ArtisteRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,21 @@ class Artiste
      * @ORM\Column(type="string", length=255)
      */
     private $Description;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=festival::class, inversedBy="artistes")
+     */
+    private $festival;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Concert::class, inversedBy="artistes")
+     */
+    private $Concert;
+
+    public function __construct()
+    {
+        $this->festival = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +86,42 @@ class Artiste
     public function setDescription(string $Description): self
     {
         $this->Description = $Description;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|festival[]
+     */
+    public function getFestival(): Collection
+    {
+        return $this->festival;
+    }
+
+    public function addFestival(festival $festival): self
+    {
+        if (!$this->festival->contains($festival)) {
+            $this->festival[] = $festival;
+        }
+
+        return $this;
+    }
+
+    public function removeFestival(festival $festival): self
+    {
+        $this->festival->removeElement($festival);
+
+        return $this;
+    }
+
+    public function getConcert(): ?Concert
+    {
+        return $this->Concert;
+    }
+
+    public function setConcert(?Concert $Concert): self
+    {
+        $this->Concert = $Concert;
 
         return $this;
     }

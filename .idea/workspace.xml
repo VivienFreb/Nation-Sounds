@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d71380f-5566-4238-8860-79fe538a198d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/festival.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/festival.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Artiste.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Artiste.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Concert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Concert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FAQ.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FAQ.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Festival.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Festival.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Information.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Information.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Partenaires.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Partenaires.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Scene.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Scene.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +23,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/VivienFreb/Nation-Sounds" />
+      </set>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -130,6 +144,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -141,11 +156,21 @@
       <option name="presentableId" value="Default" />
       <updated>1612350220231</updated>
       <workItem from="1612350222074" duration="2418000" />
-      <workItem from="1612509468002" duration="2084000" />
+      <workItem from="1612509468002" duration="6112000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2381" y="169" key="SettingsEditor" timestamp="1612513236274">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2381" y="169" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1050@1920.0.1920.1050" timestamp="1612513236274" />
+    <state x="748" y="441" width="677" height="198" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612512701735">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="748" y="441" width="677" height="198" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080/1920.0.1920.1050@0.0.1920.1080" timestamp="1612512701735" />
   </component>
 </project>
