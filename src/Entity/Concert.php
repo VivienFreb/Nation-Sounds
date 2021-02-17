@@ -25,19 +25,14 @@ class Concert
     private $Nom;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $DateDebut;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $DateFin;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $Emplacement;
 
     /**
      * @ORM\ManyToOne(targetEntity=Scene::class, inversedBy="Concert")
@@ -45,18 +40,18 @@ class Concert
     private $scene;
 
     /**
-     * @ORM\ManyToOne(targetEntity=festival::class, inversedBy="concerts")
+     * @ORM\ManyToOne(targetEntity=Festival::class, inversedBy="concerts")
      */
     private $Festival;
 
     /**
-     * @ORM\OneToMany(targetEntity=Artiste::class, mappedBy="Concert")
+     * @ORM\ManyToMany(targetEntity=Artiste::class, inversedBy="concerts")
      */
-    private $artistes;
+    private $Artistes;
 
     public function __construct()
     {
-        $this->artistes = new ArrayCollection();
+        $this->Artistes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -100,18 +95,6 @@ class Concert
         return $this;
     }
 
-    public function getEmplacement(): ?string
-    {
-        return $this->Emplacement;
-    }
-
-    public function setEmplacement(?string $Emplacement): self
-    {
-        $this->Emplacement = $Emplacement;
-
-        return $this;
-    }
-
     public function getScene(): ?Scene
     {
         return $this->scene;
@@ -124,12 +107,12 @@ class Concert
         return $this;
     }
 
-    public function getFestival(): ?festival
+    public function getFestival(): ?Festival
     {
         return $this->Festival;
     }
 
-    public function setFestival(?festival $Festival): self
+    public function setFestival(?Festival $Festival): self
     {
         $this->Festival = $Festival;
 
@@ -141,14 +124,13 @@ class Concert
      */
     public function getArtistes(): Collection
     {
-        return $this->artistes;
+        return $this->Artistes;
     }
 
     public function addArtiste(Artiste $artiste): self
     {
-        if (!$this->artistes->contains($artiste)) {
-            $this->artistes[] = $artiste;
-            $artiste->setConcert($this);
+        if (!$this->Artistes->contains($artiste)) {
+            $this->Artistes[] = $artiste;
         }
 
         return $this;
@@ -156,12 +138,7 @@ class Concert
 
     public function removeArtiste(Artiste $artiste): self
     {
-        if ($this->artistes->removeElement($artiste)) {
-            // set the owning side to null (unless already changed)
-            if ($artiste->getConcert() === $this) {
-                $artiste->setConcert(null);
-            }
-        }
+        $this->Artistes->removeElement($artiste);
 
         return $this;
     }

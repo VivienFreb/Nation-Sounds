@@ -6,6 +6,7 @@ use App\Repository\FestivalRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=FestivalRepository::class)
@@ -31,6 +32,10 @@ class Festival
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     * @Assert\Expression(
+     *     "this.getDateFin() >= this.getDateDebut()",
+     *     message="La date de fin ne peut pas être avant la date de début."
+     * )
      */
     private $DateFin;
 
@@ -65,17 +70,12 @@ class Festival
     private $partenaires;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Artiste::class, mappedBy="festival")
-     */
-    private $artistes;
-
-    /**
-     * @ORM\OneToMany(targetEntity=FAQ::class, mappedBy="festival")
+     * @ORM\OneToMany(targetEntity=FAQ::class, mappedBy="Festival")
      */
     private $FAQs;
 
     /**
-     * @ORM\OneToMany(targetEntity=Scene::class, mappedBy="festival")
+     * @ORM\OneToMany(targetEntity=Scene::class, mappedBy="Festival")
      */
     private $scenes;
 
@@ -281,32 +281,6 @@ class Festival
         return $this;
     }
 
-    /**
-     * @return Collection|Artiste[]
-     */
-    public function getArtistes(): Collection
-    {
-        return $this->artistes;
-    }
-
-    public function addArtiste(Artiste $artiste): self
-    {
-        if (!$this->artistes->contains($artiste)) {
-            $this->artistes[] = $artiste;
-            $artiste->addFestival($this);
-        }
-
-        return $this;
-    }
-
-    public function removeArtiste(Artiste $artiste): self
-    {
-        if ($this->artistes->removeElement($artiste)) {
-            $artiste->removeFestival($this);
-        }
-
-        return $this;
-    }
 
     /**
      * @return Collection|FAQ[]
@@ -396,5 +370,9 @@ class Festival
         }
 
         return $this;
+    }
+
+    public function __toString(){
+        return $this->Nom;
     }
 }

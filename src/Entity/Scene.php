@@ -35,9 +35,9 @@ class Scene
     private $Emplacement;
 
     /**
-     * @ORM\ManyToOne(targetEntity=festival::class, inversedBy="scenes")
+     * @ORM\ManyToOne(targetEntity=Festival::class, inversedBy="scenes")
      */
-    private $festival;
+    private $Festival;
 
     /**
      * @ORM\OneToMany(targetEntity=Concert::class, mappedBy="scene")
@@ -90,14 +90,14 @@ class Scene
         return $this;
     }
 
-    public function getFestival(): ?festival
+    public function getFestival(): ?Festival
     {
-        return $this->festival;
+        return $this->Festival;
     }
 
-    public function setFestival(?festival $festival): self
+    public function setFestival(?Festival $Festival): self
     {
-        $this->festival = $festival;
+        $this->Festival = $Festival;
 
         return $this;
     }

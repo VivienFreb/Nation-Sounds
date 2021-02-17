@@ -35,18 +35,18 @@ class Artiste
     private $Description;
 
     /**
-     * @ORM\ManyToMany(targetEntity=festival::class, inversedBy="artistes")
-     */
-    private $festival;
-
-    /**
      * @ORM\ManyToOne(targetEntity=Concert::class, inversedBy="artistes")
      */
     private $Concert;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Concert::class, mappedBy="Artistes")
+     */
+    private $concerts;
+
     public function __construct()
     {
-        $this->festival = new ArrayCollection();
+        $this->concerts = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -90,30 +90,6 @@ class Artiste
         return $this;
     }
 
-    /**
-     * @return Collection|festival[]
-     */
-    public function getFestival(): Collection
-    {
-        return $this->festival;
-    }
-
-    public function addFestival(festival $festival): self
-    {
-        if (!$this->festival->contains($festival)) {
-            $this->festival[] = $festival;
-        }
-
-        return $this;
-    }
-
-    public function removeFestival(festival $festival): self
-    {
-        $this->festival->removeElement($festival);
-
-        return $this;
-    }
-
     public function getConcert(): ?Concert
     {
         return $this->Concert;
@@ -122,6 +98,38 @@ class Artiste
     public function setConcert(?Concert $Concert): self
     {
         $this->Concert = $Concert;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return '(' . $this->id . ') ' .$this->NomDeScene;
+    }
+
+    /**
+     * @return Collection|Concert[]
+     */
+    public function getConcerts(): Collection
+    {
+        return $this->concerts;
+    }
+
+    public function addConcert(Concert $concert): self
+    {
+        if (!$this->concerts->contains($concert)) {
+            $this->concerts[] = $concert;
+            $concert->addArtiste($this);
+        }
+
+        return $this;
+    }
+
+    public function removeConcert(Concert $concert): self
+    {
+        if ($this->concerts->removeElement($concert)) {
+            $concert->removeArtiste($this);
+        }
 
         return $this;
     }

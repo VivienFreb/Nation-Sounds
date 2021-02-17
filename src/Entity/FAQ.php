@@ -28,9 +28,9 @@ class FAQ
     private $Reponse;
 
     /**
-     * @ORM\ManyToOne(targetEntity=festival::class, inversedBy="FAQs")
+     * @ORM\ManyToOne(targetEntity=Festival::class, inversedBy="FAQs")
      */
-    private $festival;
+    private $Festival;
 
     public function getId(): ?int
     {
@@ -61,14 +61,14 @@ class FAQ
         return $this;
     }
 
-    public function getFestival(): ?festival
+    public function getFestival(): ?Festival
     {
-        return $this->festival;
+        return $this->Festival;
     }
 
-    public function setFestival(?festival $festival): self
+    public function setFestival(?Festival $Festival): self
     {
-        $this->festival = $festival;
+        $this->Festival = $Festival;
 
         return $this;
     }
