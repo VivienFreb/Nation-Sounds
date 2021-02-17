@@ -20,21 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d71380f-5566-4238-8860-79fe538a198d" name="Default Changelist" comment="Ajout des relations entre chaque tables">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/festival.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/festival.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArtisteCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArtisteCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ConcertCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ConcertCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventsCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/FAQCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/FAQCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/FestivalCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/FestivalCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/InformationCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/InformationCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/POICrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/POICrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PartenairesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PartenairesCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SceneCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SceneCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UtilisateurCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UtilisateurCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Artiste.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Artiste.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Concert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Concert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FAQ.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FAQ.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Festival.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Festival.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Information.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Information.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/POI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/POI.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Partenaires.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Partenaires.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Scene.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Scene.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Utilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Utilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +166,11 @@
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/core" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ny6w5ymFou1ynA7H7hbFnFJqSI" />
@@ -186,7 +195,7 @@
       <updated>1612350220231</updated>
       <workItem from="1612350222074" duration="2418000" />
       <workItem from="1612509468002" duration="12742000" />
-      <workItem from="1613546513700" duration="15200000" />
+      <workItem from="1613546513700" duration="18313000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout des relations entre chaque tables">
       <created>1612515675386</created>
