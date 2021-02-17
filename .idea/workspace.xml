@@ -20,31 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d71380f-5566-4238-8860-79fe538a198d" name="Default Changelist" comment="Ajout des relations entre chaque tables">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210205095116.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/ArtisteCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/ConcertCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/EventsCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/FAQCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/FestivalCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/InformationCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/POICrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/PartenairesCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/SceneCrudController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/UtilisateurCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/festival.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/festival.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Artiste.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Artiste.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Concert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Concert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/FAQ.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FAQ.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArtisteCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArtisteCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ConcertCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ConcertCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/EventsCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/EventsCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/FAQCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/FAQCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/FestivalCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/FestivalCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/InformationCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/InformationCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/POICrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/POICrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PartenairesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PartenairesCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SceneCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SceneCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UtilisateurCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UtilisateurCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Events.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Festival.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Festival.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Scene.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Scene.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Partenaires.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Partenaires.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +186,7 @@
       <updated>1612350220231</updated>
       <workItem from="1612350222074" duration="2418000" />
       <workItem from="1612509468002" duration="12742000" />
-      <workItem from="1613546513700" duration="8382000" />
+      <workItem from="1613546513700" duration="15200000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout des relations entre chaque tables">
       <created>1612515675386</created>
@@ -228,18 +218,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="Ajout des relations entre chaque tables" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613555010946">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2610" y="286" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613566486316">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1050@0.0.1920.1080" timestamp="1613555010946" />
+    <state x="690" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1050@0.0.1920.1080" timestamp="1613558702070" />
+    <state x="2610" y="286" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080/1920.0.1920.1050@1920.0.1920.1050" timestamp="1613566486316" />
     <state x="2381" y="169" key="SettingsEditor" timestamp="1612513236274">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2381" y="169" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1050@1920.0.1920.1050" timestamp="1612513236274" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1612515683695">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2472" y="264" key="Vcs.Push.Dialog.v2" timestamp="1613564835138">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1050@0.0.1920.1080" timestamp="1612515683695" />
+    <state x="2472" y="264" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1050@1920.0.1920.1050" timestamp="1613564835138" />
     <state x="667" y="273" width="585" height="534" key="find.popup" timestamp="1613555340106">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

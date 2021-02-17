@@ -41,16 +41,19 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::section('CRUD');
-        yield MenuItem::linkToCrud('Festival', 'fa fa-home', Festival::class);
+        yield MenuItem::linkToCrud('Festival', 'fa fa-play', Festival::class);
         yield MenuItem::linkToCrud('Artiste', 'fa fa-user', Artiste::class);
-        yield MenuItem::linkToCrud('Concert', 'fa fa-home', Concert::class);
-        yield MenuItem::linkToCrud('Events', 'fa fa-home', Events::class);
+        yield MenuItem::linkToCrud('Concert', 'fa fa-music', Concert::class);
+        yield MenuItem::linkToCrud('Events', 'fa fa-calendar-alt', Events::class);
         yield MenuItem::linkToCrud('FAQ', 'fa fa-question', FAQ::class);
-        yield MenuItem::linkToCrud('Information', 'fa fa-question', Information::class);
-        yield MenuItem::linkToCrud('Partenaires', 'fa fa-user', Partenaires::class);
+        yield MenuItem::linkToCrud('Information', 'fa fa-info', Information::class);
+        yield MenuItem::linkToCrud('Partenaires', 'fa fa-building', Partenaires::class);
         yield MenuItem::linkToCrud('Points d\'intérêts', 'fa fa-map-pin', POI::class);
-        yield MenuItem::linkToCrud('Scene', 'fa fa-home', Scene::class);
+        yield MenuItem::linkToCrud('Scene', 'fa fa-search-location', Scene::class);
         yield MenuItem::linkToCrud('Utilisateur', 'fa fa-user', Utilisateur::class);
+
+        yield MenuItem::section('Routes API');
+        yield MenuItem::linkToUrl('Festival', 'fa fa-play', 'https://localhost/api/festival');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }

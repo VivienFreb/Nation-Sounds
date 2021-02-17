@@ -45,11 +45,6 @@ class Festival
     private $Adresse;
 
     /**
-     * @ORM\Column(type="array")
-     */
-    private $ReseauxSociaux = [];
-
-    /**
      * @ORM\OneToMany(targetEntity=POI::class, mappedBy="festival")
      */
     private $POIs;
@@ -65,11 +60,6 @@ class Festival
     private $events;
 
     /**
-     * @ORM\OneToMany(targetEntity=Partenaires::class, mappedBy="Festival")
-     */
-    private $partenaires;
-
-    /**
      * @ORM\OneToMany(targetEntity=FAQ::class, mappedBy="Festival")
      */
     private $FAQs;
@@ -83,6 +73,21 @@ class Festival
      * @ORM\OneToMany(targetEntity=Concert::class, mappedBy="Festival")
      */
     private $concerts;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Facebook;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Instagram;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Twitter;
 
     public function __construct()
     {
@@ -145,18 +150,6 @@ class Festival
     public function setAdresse(?string $Adresse): self
     {
         $this->Adresse = $Adresse;
-
-        return $this;
-    }
-
-    public function getReseauxSociaux(): ?array
-    {
-        return $this->ReseauxSociaux;
-    }
-
-    public function setReseauxSociaux(array $ReseauxSociaux): self
-    {
-        $this->ReseauxSociaux = $ReseauxSociaux;
 
         return $this;
     }
@@ -252,37 +245,6 @@ class Festival
     }
 
     /**
-     * @return Collection|Partenaires[]
-     */
-    public function getPartenaires(): Collection
-    {
-        return $this->partenaires;
-    }
-
-    public function addPartenaire(Partenaires $partenaire): self
-    {
-        if (!$this->partenaires->contains($partenaire)) {
-            $this->partenaires[] = $partenaire;
-            $partenaire->setFestival($this);
-        }
-
-        return $this;
-    }
-
-    public function removePartenaire(Partenaires $partenaire): self
-    {
-        if ($this->partenaires->removeElement($partenaire)) {
-            // set the owning side to null (unless already changed)
-            if ($partenaire->getFestival() === $this) {
-                $partenaire->setFestival(null);
-            }
-        }
-
-        return $this;
-    }
-
-
-    /**
      * @return Collection|FAQ[]
      */
     public function getFAQs(): Collection
@@ -374,5 +336,41 @@ class Festival
 
     public function __toString(){
         return $this->Nom;
+    }
+
+    public function getFacebook(): ?string
+    {
+        return $this->Facebook;
+    }
+
+    public function setFacebook(?string $Facebook): self
+    {
+        $this->Facebook = $Facebook;
+
+        return $this;
+    }
+
+    public function getInstagram(): ?string
+    {
+        return $this->Instagram;
+    }
+
+    public function setInstagram(?string $Instagram): self
+    {
+        $this->Instagram = $Instagram;
+
+        return $this;
+    }
+
+    public function getTwitter(): ?string
+    {
+        return $this->Twitter;
+    }
+
+    public function setTwitter(?string $Twitter): self
+    {
+        $this->Twitter = $Twitter;
+
+        return $this;
     }
 }

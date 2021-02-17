@@ -33,14 +33,24 @@ class Partenaires
     private $Site;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
-     */
-    private $ReseauxSociaux = [];
-
-    /**
      * @ORM\ManyToOne(targetEntity=Festival::class, inversedBy="partenaires")
      */
     private $Festival;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Facebook;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Instagram;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Twitter;
 
     public function getId(): ?int
     {
@@ -83,18 +93,6 @@ class Partenaires
         return $this;
     }
 
-    public function getReseauxSociaux(): ?array
-    {
-        return $this->ReseauxSociaux;
-    }
-
-    public function setReseauxSociaux(?array $ReseauxSociaux): self
-    {
-        $this->ReseauxSociaux = $ReseauxSociaux;
-
-        return $this;
-    }
-
     public function getFestival(): ?Festival
     {
         return $this->Festival;
@@ -103,6 +101,42 @@ class Partenaires
     public function setFestival(?Festival $Festival): self
     {
         $this->Festival = $Festival;
+
+        return $this;
+    }
+
+    public function getFacebook(): ?string
+    {
+        return $this->Facebook;
+    }
+
+    public function setFacebook(?string $Facebook): self
+    {
+        $this->Facebook = $Facebook;
+
+        return $this;
+    }
+
+    public function getInstagram(): ?string
+    {
+        return $this->Instagram;
+    }
+
+    public function setInstagram(?string $Instagram): self
+    {
+        $this->Instagram = $Instagram;
+
+        return $this;
+    }
+
+    public function getTwitter(): ?string
+    {
+        return $this->Twitter;
+    }
+
+    public function setTwitter(?string $Twitter): self
+    {
+        $this->Twitter = $Twitter;
 
         return $this;
     }

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\EventsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=EventsRepository::class)
@@ -44,6 +45,9 @@ class Events
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(
+     *     min="0",
+     * )
      */
     private $Places;
 

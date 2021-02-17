@@ -21,6 +21,7 @@ class SceneCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
+            IdField::new('id')->hideOnForm(),
             TextField::new('Nom', 'Nom de la scène'),
             IntegerField::new('nbplaces', 'Nombre de places'),
             TextField::new('Emplacement', 'Emplacement scène'),
