@@ -24,14 +24,30 @@ class UtilisateurCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
+//        $roles = $this->getParameter('security.role_hierarchy.roles');
+//
+//        echo "<pre>";
+//        var_dump($roles);
+//        echo "</pre>";
+//
+//        $roles = [
+//            'Administateur' => 'ROLE_ADMIN',
+//            'Utilisateur' => 'ROLE_USER'
+//        ];
+//
+//        echo "<pre>";
+//        var_dump($roles);
+//        echo "</pre>";
+
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('Nom', 'Nom'),
             TextField::new('Prenom', 'Prénom'),
             DateField::new('DateDeNaissance', 'Date de naissance'),
-            ChoiceField::new('Role', 'Rôle de l\'utilisateur')->setChoices(['ah']),
+//            ChoiceField::new('Role', 'Rôle de l\'utilisateur')->setChoices([$roles]),
             EmailField::new('Mail', 'Mail'),
             TelephoneField::new('Telephone', 'Téléphone'),
+            TextField::new('Password', 'Mot de passe'),
             ];
     }
 }

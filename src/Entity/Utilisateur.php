@@ -54,6 +54,11 @@ class Utilisateur
      */
     private $MotDePasse;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $Password;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -139,6 +144,18 @@ class Utilisateur
     public function setMotDePasse(string $MotDePasse): self
     {
         $this->MotDePasse = $MotDePasse;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->Password;
+    }
+
+    public function setPassword(string $Password): self
+    {
+        $this->Password = $Password;
 
         return $this;
     }
