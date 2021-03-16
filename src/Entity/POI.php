@@ -30,11 +30,6 @@ class POI
     private $Description;
 
     /**
-     * @ORM\Column(type="json")
-     */
-    private $Coordonnees = [];
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Lien;
@@ -44,6 +39,16 @@ class POI
      * @ORM\JoinColumn(nullable=false)
      */
     private $festival;
+
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=8, nullable=true)
+     */
+    private $Longitude;
+
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=8, nullable=true)
+     */
+    private $Latitude;
 
     public function getId(): ?int
     {
@@ -74,17 +79,6 @@ class POI
         return $this;
     }
 
-    public function getCoordonnees(): ?array
-    {
-        return $this->Coordonnees;
-    }
-
-    public function setCoordonnees(array $Coordonnees): self
-    {
-        $this->Coordonnees = $Coordonnees;
-
-        return $this;
-    }
 
     public function getLien(): ?string
     {
@@ -106,6 +100,30 @@ class POI
     public function setFestival(?Festival $festival): self
     {
         $this->festival = $festival;
+
+        return $this;
+    }
+
+    public function getLongitude(): ?string
+    {
+        return $this->Longitude;
+    }
+
+    public function setLongitude(?string $Longitude): self
+    {
+        $this->Longitude = $Longitude;
+
+        return $this;
+    }
+
+    public function getLatitude(): ?string
+    {
+        return $this->Latitude;
+    }
+
+    public function setLatitude(?string $Latitude): self
+    {
+        $this->Latitude = $Latitude;
 
         return $this;
     }

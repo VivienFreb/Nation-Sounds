@@ -39,6 +39,21 @@ class Information
      */
     private $Festival;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $Contenu;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $NomEN;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ContenuEN;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -88,6 +103,42 @@ class Information
     public function setFestival(?Festival $Festival): self
     {
         $this->Festival = $Festival;
+
+        return $this;
+    }
+
+    public function getContenu(): ?string
+    {
+        return $this->Contenu;
+    }
+
+    public function setContenu(?string $Contenu): self
+    {
+        $this->Contenu = $Contenu;
+
+        return $this;
+    }
+
+    public function getNomEN(): ?string
+    {
+        return $this->NomEN;
+    }
+
+    public function setNomEN(?string $NomEN): self
+    {
+        $this->NomEN = $NomEN;
+
+        return $this;
+    }
+
+    public function getContenuEN(): ?string
+    {
+        return $this->ContenuEN;
+    }
+
+    public function setContenuEN(?string $ContenuEN): self
+    {
+        $this->ContenuEN = $ContenuEN;
 
         return $this;
     }
