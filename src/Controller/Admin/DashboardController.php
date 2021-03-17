@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Artiste;
+use App\Entity\Blog;
 use App\Entity\Concert;
 use App\Entity\Events;
 use App\Entity\FAQ;
@@ -23,6 +24,7 @@ class DashboardController extends AbstractDashboardController
 {
     /**
      * @Route("/dashboard", name="dashboard")
+     * @Route("/", name="home")
      */
     public function index(): Response
     {
@@ -51,18 +53,20 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Points d\'intérêts', 'fa fa-map-pin', POI::class);
         yield MenuItem::linkToCrud('Scene', 'fa fa-search-location', Scene::class);
         yield MenuItem::linkToCrud('Utilisateur', 'fa fa-user', Utilisateur::class);
+        yield MenuItem::linkToCrud('Blog', 'fa fa-user', Blog::class);
 
         yield MenuItem::section('Routes API');
-        yield MenuItem::linkToUrl('Festival', 'fa fa-play', 'http://localhost:8000/api/festivals');
-        yield MenuItem::linkToUrl('Artiste', 'fa fa-user', 'http://localhost:8000/api/artistes');
-        yield MenuItem::linkToUrl('Concert', 'fa fa-music', 'http://localhost:8000/api/concerts');
-        yield MenuItem::linkToUrl('Events', 'fa fa-calendar-alt', 'http://localhost:8000/api/events');
-        yield MenuItem::linkToUrl('FAQ', 'fa fa-question', 'http://localhost:8000/api/f_a_qs');
-        yield MenuItem::linkToUrl('Information', 'fa fa-info', 'http://localhost:8000/api/information');
-        yield MenuItem::linkToUrl('Partenaires', 'fa fa-building', 'http://localhost:8000/api/partenaires');
-        yield MenuItem::linkToUrl('Points d\'intérêts', 'fa fa-map-pin', 'http://localhost:8000/api/p_o_is');
-        yield MenuItem::linkToUrl('Scene', 'fa fa-search-location', 'http://localhost:8000/api/scenes');
-        yield MenuItem::linkToUrl('Utilisateur', 'fa fa-user', 'http://localhost:8000/api/utilisateurs');
+        yield MenuItem::linkToUrl('Festival', 'fa fa-play', '/api/#tag/Festival');
+        yield MenuItem::linkToUrl('Artiste', 'fa fa-user', '/api/#tag/Artiste');
+        yield MenuItem::linkToUrl('Concert', 'fa fa-music', '/api/#tag/Concert');
+        yield MenuItem::linkToUrl('Events', 'fa fa-calendar-alt', '/api/#tag/Events');
+        yield MenuItem::linkToUrl('FAQ', 'fa fa-question', '/api/#tag/FAQ');
+        yield MenuItem::linkToUrl('Information', 'fa fa-info', '/api/#tag/Information');
+        yield MenuItem::linkToUrl('Partenaires', 'fa fa-building', '/api/#tag/Partenaires');
+        yield MenuItem::linkToUrl('Points d\'intérêts', 'fa fa-map-pin', '/api/#tag/POI');
+        yield MenuItem::linkToUrl('Scene', 'fa fa-search-location', '/api/#tag/Scene');
+        yield MenuItem::linkToUrl('Utilisateur', 'fa fa-user', '/api/#tag/Utilisateur');
+        yield MenuItem::linkToUrl('Blog', 'fa fa-user', '/api/#tag/Blog');
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }

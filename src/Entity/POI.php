@@ -50,6 +50,11 @@ class POI
      */
     private $Latitude;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $DescriptionEN;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -124,6 +129,18 @@ class POI
     public function setLatitude(?string $Latitude): self
     {
         $this->Latitude = $Latitude;
+
+        return $this;
+    }
+
+    public function getDescriptionEN(): ?string
+    {
+        return $this->DescriptionEN;
+    }
+
+    public function setDescriptionEN(?string $DescriptionEN): self
+    {
+        $this->DescriptionEN = $DescriptionEN;
 
         return $this;
     }

@@ -46,6 +46,16 @@ class Artiste
      */
     private $concerts;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $StyleMusiqueEN;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $DescriptionEN;
+
     public function __construct()
     {
         $this->concerts = new ArrayCollection();
@@ -132,6 +142,30 @@ class Artiste
         if ($this->concerts->removeElement($concert)) {
             $concert->removeArtiste($this);
         }
+
+        return $this;
+    }
+
+    public function getStyleMusiqueEN(): ?string
+    {
+        return $this->StyleMusiqueEN;
+    }
+
+    public function setStyleMusiqueEN(?string $StyleMusiqueEN): self
+    {
+        $this->StyleMusiqueEN = $StyleMusiqueEN;
+
+        return $this;
+    }
+
+    public function getDescriptionEN(): ?string
+    {
+        return $this->DescriptionEN;
+    }
+
+    public function setDescriptionEN(?string $DescriptionEN): self
+    {
+        $this->DescriptionEN = $DescriptionEN;
 
         return $this;
     }

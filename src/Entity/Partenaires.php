@@ -54,6 +54,11 @@ class Partenaires
      */
     private $Twitter;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $DescriptionEN;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -139,6 +144,18 @@ class Partenaires
     public function setTwitter(?string $Twitter): self
     {
         $this->Twitter = $Twitter;
+
+        return $this;
+    }
+
+    public function getDescriptionEN(): ?string
+    {
+        return $this->DescriptionEN;
+    }
+
+    public function setDescriptionEN(?string $DescriptionEN): self
+    {
+        $this->DescriptionEN = $DescriptionEN;
 
         return $this;
     }

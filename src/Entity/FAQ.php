@@ -34,6 +34,16 @@ class FAQ
      */
     private $Festival;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $QuestionEN;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ReponseEN;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,6 +81,30 @@ class FAQ
     public function setFestival(?Festival $Festival): self
     {
         $this->Festival = $Festival;
+
+        return $this;
+    }
+
+    public function getQuestionEN(): ?string
+    {
+        return $this->QuestionEN;
+    }
+
+    public function setQuestionEN(?string $QuestionEN): self
+    {
+        $this->QuestionEN = $QuestionEN;
+
+        return $this;
+    }
+
+    public function getReponseEN(): ?string
+    {
+        return $this->ReponseEN;
+    }
+
+    public function setReponseEN(?string $ReponseEN): self
+    {
+        $this->ReponseEN = $ReponseEN;
 
         return $this;
     }
