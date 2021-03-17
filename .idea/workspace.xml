@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d71380f-5566-4238-8860-79fe538a198d" name="Default Changelist" comment="Ajout des relations entre chaque tables">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/PartenairesCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/PartenairesCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Artiste.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Artiste.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/BlogCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/BlogCrudController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +195,7 @@
       <workItem from="1615200526078" duration="1192000" />
       <workItem from="1615296500069" duration="781000" />
       <workItem from="1615882975007" duration="2922000" />
-      <workItem from="1615964967545" duration="6786000" />
+      <workItem from="1615964967545" duration="7056000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout des relations entre chaque tables">
       <created>1612515675386</created>
