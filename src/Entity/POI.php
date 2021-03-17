@@ -25,7 +25,7 @@ class POI
     private $Nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $Description;
 
@@ -51,7 +51,7 @@ class POI
     private $Latitude;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $DescriptionEN;
 

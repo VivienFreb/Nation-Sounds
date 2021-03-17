@@ -28,7 +28,9 @@ class PartenairesCrudController extends AbstractCrudController
             TextEditorField::new('Description', 'Description'),
             UrlField::new('Site', 'Site du partenaire'),
             AssociationField::new('Festival', 'Festival concerné')->autocomplete(),
-            ArrayField::new('ReseauxSociaux', 'Réseaux sociaux'),
+            UrlField::new('Facebook', 'Facebook'),
+            UrlField::new('Instagram', 'Instagram'),
+            UrlField::new('Twitter', 'Twitter'),
         ];
     }
 

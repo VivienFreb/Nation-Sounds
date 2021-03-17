@@ -32,7 +32,7 @@ class Artiste
     private $StyleMusique;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $Description;
 
@@ -52,7 +52,7 @@ class Artiste
     private $StyleMusiqueEN;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $DescriptionEN;
 

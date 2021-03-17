@@ -40,7 +40,7 @@ class Information
     private $Festival;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $Contenu;
 
@@ -50,7 +50,7 @@ class Information
     private $NomEN;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $ContenuEN;
 

@@ -25,7 +25,7 @@ class Partenaires
     private $Nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $Description;
 
@@ -55,7 +55,7 @@ class Partenaires
     private $Twitter;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $DescriptionEN;
 
